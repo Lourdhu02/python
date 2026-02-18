@@ -1,4 +1,4 @@
-<div >
+<div align="center">
 
 # 365 Days of Python Coding Challenge
 
