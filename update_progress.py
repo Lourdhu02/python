@@ -3,7 +3,7 @@ update_progress.py
 ------------------
 Run this before every git push.
 Scans all phase folders, reads file timestamps, and auto-updates:
-  - README.md     (problems solved badge + days active badge)
+  - README.md     (days X/365 badge + problems solved count badge)
   - PROGRESS.md   (full problem log per phase)
   - CHANGELOG.md  (activity log grouped by date)
 """
@@ -17,7 +17,7 @@ from collections import defaultdict
 
 BASE_DIR   = Path(__file__).parent
 START_DATE = date(2025, 2, 14)
-TOTAL      = 365
+TOTAL_DAYS = 365                  # the 365-day goal
 
 PHASES = [
     {"folder": "python-basic-phase-1",       "name": "Phase 1 — Python Basics",                "range": "001–073"},
@@ -34,12 +34,11 @@ def get_files(folder: Path) -> list:
         return []
     files = []
     for f in sorted(folder.glob("*.py")):
-        ts   = f.stat().st_mtime
-        added = datetime.fromtimestamp(ts)
+        added = datetime.fromtimestamp(f.stat().st_mtime)
         files.append({"name": f.name, "date": added.date()})
     return files
 
-# ── README Badge Updater ──────────────────────────────────────────────────────
+# ── README Updater ────────────────────────────────────────────────────────────
 
 def update_readme(path: Path, problems: int, days: int):
     if not path.exists():
@@ -48,34 +47,34 @@ def update_readme(path: Path, problems: int, days: int):
 
     content = path.read_text(encoding="utf-8")
 
-    # Update problems badge
+    # Badge: Days%20Active-3%20%2F%20365
     updated = re.sub(
-        r"Problems%20Solved-\d+%20%2F%20\d+",
-        f"Problems%20Solved-{problems}%20%2F%20{TOTAL}",
+        r"Days%20Active-\d+%20%2F%20\d+",
+        f"Days%20Active-{days}%20%2F%20{TOTAL_DAYS}",
         content
     )
-    # Update days active badge
+    # Badge: Problems%20Solved-16  (no cap, just a count)
     updated = re.sub(
-        r"Days%20Active-\d+",
-        f"Days%20Active-{days}",
+        r"Problems%20Solved-\d+",
+        f"Problems%20Solved-{problems}",
         updated
     )
-    # Update About line — problems
+    # About line: **Days Active:** 3 / 365
+    updated = re.sub(
+        r"\*\*Days Active:\*\* \d+ / \d+",
+        f"**Days Active:** {days} / {TOTAL_DAYS}",
+        updated
+    )
+    # About line: **Problems Solved:** 16
     updated = re.sub(
         r"\*\*Problems Solved:\*\* \d+",
         f"**Problems Solved:** {problems}",
         updated
     )
-    # Update About line — days
-    updated = re.sub(
-        r"\*\*Days Active:\*\* \d+",
-        f"**Days Active:** {days}",
-        updated
-    )
 
     if updated != content:
         path.write_text(updated, encoding="utf-8")
-        print(f"  [updated] README.md  ->  {problems} problems / {days} days active")
+        print(f"  [updated] README.md  ->  {days} / {TOTAL_DAYS} days  |  {problems} problems")
     else:
         print(f"  [no change] README.md already up to date")
 
@@ -92,29 +91,26 @@ def write_progress_md(phase_data: list, problems: int, days: int):
     lines.append("# Progress Log\n")
     lines.append(f"Last updated: {today}\n")
     lines.append("")
-
     lines.append("## Summary\n")
     lines.append("| Metric | Value |")
     lines.append("|--------|-------|")
-    lines.append(f"| Problems Solved | {problems} / {TOTAL} |")
-    lines.append(f"| Days Active | {days} |")
+    lines.append(f"| Days Active | {days} / {TOTAL_DAYS} |")
+    lines.append(f"| Problems Solved | {problems} |")
     lines.append(f"| Started | {START_DATE.strftime('%B %d, %Y')} |")
     lines.append(f"| Last Push | {last_activity} |")
     lines.append(f"| Phases Active | {sum(1 for p in phase_data if p['files'])} / {len(PHASES)} |")
     lines.append("")
-
     lines.append("## Phase Breakdown\n")
-    lines.append("| Phase | Folder | Solved | Range |")
-    lines.append("|-------|--------|--------|-------|")
+    lines.append("| Phase | Folder | Solved |")
+    lines.append("|-------|--------|--------|")
     for p in phase_data:
-        lines.append(f"| {p['name']} | `{p['folder']}` | {len(p['files'])} | {p['range']} |")
+        lines.append(f"| {p['name']} | `{p['folder']}` | {len(p['files'])} |")
     lines.append("")
-
     lines.append("## All Problems\n")
     running = 0
     for p in phase_data:
         lines.append(f"### {p['name']}\n")
-        lines.append(f"`{p['folder']}/` &nbsp;·&nbsp; {p['range']}\n")
+        lines.append(f"`{p['folder']}/`\n")
         if not p["files"]:
             lines.append("No problems pushed yet.\n")
             continue
@@ -122,7 +118,7 @@ def write_progress_md(phase_data: list, problems: int, days: int):
         lines.append("|---|------|-------------|")
         for f in p["files"]:
             running += 1
-            lines.append(f"| {running:03d} | `{f['name']}` | {f['date']} |")
+            lines.append(f"| {running} | `{f['name']}` | {f['date']} |")
         lines.append("")
 
     (BASE_DIR / "PROGRESS.md").write_text("\n".join(lines), encoding="utf-8")
@@ -140,11 +136,10 @@ def write_changelog_md(phase_data: list):
     lines.append("# Changelog\n")
     lines.append("Auto-generated by `update_progress.py`. Updated on every push.\n")
     lines.append("")
-
     for d in sorted(by_date.keys(), reverse=True):
         entries = by_date[d]
         count   = len(entries)
-        lines.append(f"## {d.strftime('%B %d, %Y')} &nbsp;·&nbsp; {count} problem{'s' if count > 1 else ''}\n")
+        lines.append(f"## {d.strftime('%B %d, %Y')} — {count} problem{'s' if count > 1 else ''}\n")
         for entry in entries:
             lines.append(f"- `{entry['file']}` &nbsp; {entry['phase']}")
         lines.append("")
@@ -166,24 +161,24 @@ def main():
         all_dates.extend(f["date"] for f in files)
         print(f"  {phase['folder']:<40}  {len(files)} file(s)")
 
-    problems    = sum(len(p["files"]) for p in phase_data)
-    days_active = len(set(all_dates))   # unique dates with at least one push
+    problems = sum(len(p["files"]) for p in phase_data)
+    days     = len(set(all_dates))   # unique push dates = days active
 
-    print(f"\n  Problems solved : {problems} / {TOTAL}")
-    print(f"  Days active     : {days_active}\n")
+    print(f"\n  Days active     : {days} / {TOTAL_DAYS}")
+    print(f"  Problems solved : {problems}\n")
 
     print("Updating README.md ...")
-    update_readme(BASE_DIR / "README.md", problems, days_active)
+    update_readme(BASE_DIR / "README.md", problems, days)
 
     print("Writing PROGRESS.md ...")
-    write_progress_md(phase_data, problems, days_active)
+    write_progress_md(phase_data, problems, days)
 
     print("Writing CHANGELOG.md ...")
     write_changelog_md(phase_data)
 
     print(f"\nAll done. Now run:\n")
     print(f"  git add .")
-    print(f"  git commit -m \"Day {days_active:03d} | Phase X | Your Topic\"")
+    print(f"  git commit -m \"Day {days:03d} | Phase X | Your Topic\"")
     print(f"  git push origin main\n")
 
 
