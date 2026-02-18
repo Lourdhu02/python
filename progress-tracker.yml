@@ -1,0 +1,29 @@
+name: Update Progress Badge
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Count completed solutions
+      id: count
+      run: |
+        COUNT=$(find python-basic-phase-1 python-intermediat-phase-2 python-advance-phase-3 python-dsa-phase-4 python-core-phase-5 -name "*.py" 2>/dev/null | wc -l | tr -d ' ')
+        echo "count=$COUNT" >> $GITHUB_OUTPUT
+
+    - name: Update badge in README
+      run: |
+        COUNT=${{ steps.count.outputs.count }}
+        sed -i "s/Progress-[0-9]*%2F365/Progress-${COUNT}%2F365/g" README.md
+
+    - name: Commit if changed
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Auto-update progress badge [${{ steps.count.outputs.count }}/365]"
+        file_pattern: README.md
