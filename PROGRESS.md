@@ -1,6 +1,6 @@
 # Progress Log
 
-**Last updated:** February 18, 2026
+Last updated: February 18, 2026
 
 
 ## Summary
@@ -8,14 +8,13 @@
 | Metric | Value |
 |--------|-------|
 | Total Completed | 15 / 365 |
-| Current Streak | 2 days |
 | Phases Active | 1 / 5 |
-| Last Activity | 2026-02-18 |
+| Last Push | 2026-02-18 |
 
 ## Phase Breakdown
 
-| Phase | Folder | Completed | Days |
-|-------|--------|-----------|------|
+| Phase | Folder | Completed | Problem Range |
+|-------|--------|-----------|---------------|
 | Phase 1 — Python Basics | `python-basic-phase-1` | 15 | 001–073 |
 | Phase 2 — Intermediate Python | `python-intermediat-phase-2` | 0 | 074–146 |
 | Phase 3 — Advanced Python | `python-advance-phase-3` | 0 | 147–219 |
@@ -26,10 +25,10 @@
 
 ### Phase 1 — Python Basics
 
-`python-basic-phase-1/` &nbsp;·&nbsp; Days 001–073
+`python-basic-phase-1/` &nbsp;·&nbsp; Problems 001–073
 
-| # | File | Date Added |
-|---|------|------------|
+| # | File | Date Pushed |
+|---|------|-------------|
 | 001 | `add_two_numbers.py` | 2026-02-17 |
 | 002 | `area_rectangle.py` | 2026-02-17 |
 | 003 | `average.py` | 2026-02-17 |
@@ -48,24 +47,24 @@
 
 ### Phase 2 — Intermediate Python
 
-`python-intermediat-phase-2/` &nbsp;·&nbsp; Days 074–146
+`python-intermediat-phase-2/` &nbsp;·&nbsp; Problems 074–146
 
-No solutions added yet.
+No problems pushed yet.
 
 ### Phase 3 — Advanced Python
 
-`python-advance-phase-3/` &nbsp;·&nbsp; Days 147–219
+`python-advance-phase-3/` &nbsp;·&nbsp; Problems 147–219
 
-No solutions added yet.
+No problems pushed yet.
 
 ### Phase 4 — Data Structures & Algorithms
 
-`python-dsa-phase-4/` &nbsp;·&nbsp; Days 220–292
+`python-dsa-phase-4/` &nbsp;·&nbsp; Problems 220–292
 
-No solutions added yet.
+No problems pushed yet.
 
 ### Phase 5 — Python Core & Internals
 
-`python-core/` &nbsp;·&nbsp; Days 293–365
+`python-core/` &nbsp;·&nbsp; Problems 293–365
 
-No solutions added yet.
+No problems pushed yet.

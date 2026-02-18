@@ -1,12 +1,12 @@
-<div >
+<div>
 
 # 365 Days of Python Coding Challenge
 
-**A structured, daily Python practice challenge — from core fundamentals to advanced internals, DSA, and real-world problem solving.**
+**A structured Python coding challenge — from core fundamentals to advanced internals, DSA, and real-world problem solving.**
 
 <br/>
 
-[![Progress](https://img.shields.io/badge/Progress-15%20%2F%20365%20Days-22c55e?style=for-the-badge&logo=python&logoColor=white)](https://github.com/Lourdhu02/python)
+[![Progress](https://img.shields.io/badge/Progress-15%20%2F%20365-22c55e?style=for-the-badge&logo=python&logoColor=white)](https://github.com/Lourdhu02/python)
 [![Python Version](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![GitHub Stars](https://img.shields.io/github/stars/Lourdhu02/python?style=for-the-badge&logo=github&logoColor=white&color=f59e0b)](https://github.com/Lourdhu02/python/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/Lourdhu02/python?style=for-the-badge&logo=git&logoColor=white&color=6366f1)](https://github.com/Lourdhu02/python/commits)
@@ -18,9 +18,11 @@
 
 ## About
 
-This repository is a public record of my **365-day Python coding challenge**. One problem solved every single day, progressing through five structured phases — from syntax basics to CPython internals and data structures & algorithms.
+This repository is a public record of my **365-problem Python coding challenge**. Problems are solved across five structured phases — from syntax basics to CPython internals and data structures & algorithms.
 
-**Started:** January 01, 2025 &nbsp;|&nbsp; **Target:** December 31, 2025 &nbsp;|&nbsp; **Current Day:** 14 &nbsp;|&nbsp; **Current Streak:** 14 days
+**Started:** February 14, 2025 &nbsp;|&nbsp; **Goal:** 365 problems total &nbsp;|&nbsp; **Completed:** 15
+
+Progress is counted by problems pushed to this repo, not by calendar day. Some sessions have 1 problem, some have 10 — the only rule is the cycle completes at 365.
 
 ---
 
@@ -29,19 +31,23 @@ This repository is a public record of my **365-day Python coding challenge**. On
 ```
 Lourdhu02/python/
 │
-├── python-basic-phase-1/           # Days 001–073  | Python Basics
-├── python-intermediat-phase-2/     # Days 074–146  | Intermediate Python
-├── python-advance-phase-3/         # Days 147–219  | Advanced Python
-├── python-dsa-phase-4/             # Days 220–292  | Data Structures & Algorithms
-├── python-core-phase-5/            # Days 293–365  | Python Core & Internals
+├── python-basic-phase-1/           # Problems 001–073  | Python Basics
+├── python-intermediat-phase-2/     # Problems 074–146  | Intermediate Python
+├── python-advance-phase-3/         # Problems 147–219  | Advanced Python
+├── python-dsa-phase-4/             # Problems 220–292  | Data Structures & Algorithms
+├── python-core/                    # Problems 293–365  | Python Core & Internals
 │
 ├── questions-pdf/                  # Reference problem sets (PDF)
 ├── .github/workflows/              # CI — auto progress tracker
+├── update_progress.py              # Run before every push to sync all logs
+├── PROGRESS.md                     # Auto-generated problem log
+├── CHANGELOG.md                    # Auto-generated daily activity log
 ├── CONTRIBUTING.md
 ├── GIT_WORKFLOW.md
 ├── .gitignore
 └── README.md
 ```
+
 ---
 
 ## How to Run
@@ -78,5 +84,5 @@ MIT &copy; [Lourdhu02](https://github.com/Lourdhu02)
 ---
 
 <div align="center">
-  One problem. Every day. No excuses.
+  365 problems. No deadline. Just consistency.
 </div>
