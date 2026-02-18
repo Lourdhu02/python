@@ -42,31 +42,6 @@ Lourdhu02/python/
 ├── .gitignore
 └── README.md
 ```
-
----
-
-`python-dsa-phase-4/` &nbsp;·&nbsp; Days 220–292
-
-<details>
-<summary>View topics</summary>
-
-Arrays & Strings, Linked Lists, Stacks & Queues, Trees & Graphs, Sorting & Searching, Recursion & Backtracking, Dynamic Programming.
-
-</details>
-
----
-
-## Phase 5 — Python Core & Internals
-
-`python-core-phase-5/` &nbsp;·&nbsp; Days 293–365
-
-<details>
-<summary>View topics</summary>
-
-CPython internals, Memory management, The Global Interpreter Lock (GIL), Bytecode & the `dis` module, C extensions, Python execution model under the hood.
-
-</details>
-
 ---
 
 ## How to Run
