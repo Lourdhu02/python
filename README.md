@@ -1,4 +1,4 @@
-<div align="center">
+<div>
 
 # 365 Days of Python Coding Challenge
 
@@ -6,7 +6,8 @@
 
 <br/>
 
-[![Progress](https://img.shields.io/badge/Progress-15%20%2F%20365-22c55e?style=for-the-badge&logo=python&logoColor=white)](https://github.com/Lourdhu02/python)
+[![Problems](https://img.shields.io/badge/Problems%20Solved-16%20%2F%20365-22c55e?style=for-the-badge&logo=python&logoColor=white)](https://github.com/Lourdhu02/python)
+[![Days Active](https://img.shields.io/badge/Days%20Active-3-6366f1?style=for-the-badge&logo=calendar&logoColor=white)](https://github.com/Lourdhu02/python)
 [![Python Version](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![GitHub Stars](https://img.shields.io/github/stars/Lourdhu02/python?style=for-the-badge&logo=github&logoColor=white&color=f59e0b)](https://github.com/Lourdhu02/python/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/Lourdhu02/python?style=for-the-badge&logo=git&logoColor=white&color=6366f1)](https://github.com/Lourdhu02/python/commits)
@@ -18,11 +19,11 @@
 
 ## About
 
-This repository is a public record of my **365-problem Python coding challenge**. Problems are solved across five structured phases — from syntax basics to CPython internals and data structures & algorithms.
+This repository is a public record of my **365-day Python coding challenge**. Problems are solved across five structured phases — from syntax basics to CPython internals and data structures & algorithms.
 
-**Started:** February 14, 2025 &nbsp;|&nbsp; **Goal:** 365 problems total &nbsp;|&nbsp; **Completed:** 15
+**Started:** February 14, 2025 &nbsp;|&nbsp; **Goal:** 365 problems across 365 days &nbsp;|&nbsp; **Problems Solved:** 16 &nbsp;|&nbsp; **Days Active:** 3
 
-Progress is counted by problems pushed to this repo, not by calendar day. Some sessions have 1 problem, some have 10 — the only rule is the cycle completes at 365.
+Progress tracks both the number of problems pushed and the number of days coded. Some sessions have 1 problem, some have 10 — the goal is 365 problems over 365 days.
 
 ---
 
@@ -84,5 +85,5 @@ MIT &copy; [Lourdhu02](https://github.com/Lourdhu02)
 ---
 
 <div align="center">
-  365 problems. No deadline. Just consistency.
+  365 problems. 365 days. Just consistency.
 </div>
