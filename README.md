@@ -1,4 +1,4 @@
-<div align="center">
+<div >
 
 # 365 Days of Python Coding Challenge
 
@@ -44,75 +44,6 @@ Lourdhu02/python/
 ```
 
 ---
-
-## Progress Overview
-
-| Phase | Folder | Focus Areas | Days | Status |
-|-------|--------|-------------|------|--------|
-| 1 | `python-basic-phase-1` | Variables, Loops, Functions, Conditionals, Math | 001–073 | In Progress |
-| 2 | `python-intermediat-phase-2` | OOP, File I/O, Modules, Error Handling | 074–146 | Upcoming |
-| 3 | `python-advance-phase-3` | Decorators, Generators, Async, APIs, Patterns | 147–219 | Upcoming |
-| 4 | `python-dsa-phase-4` | Arrays, Trees, Graphs, Sorting, Dynamic Programming | 220–292 | Upcoming |
-| 5 | `python-core-phase-5` | CPython, Memory Management, GIL, Bytecode | 293–365 | Upcoming |
-
----
-
-## Phase 1 — Python Basics
-
-`python-basic-phase-1/` &nbsp;·&nbsp; Days 001–073
-
-<details>
-<summary>View completed problems</summary>
-
-| Day | File | Topic | Status |
-|-----|------|-------|--------|
-| 001 | `hello.py` | Hello World | Done |
-| 002 | `add_two_numbers.py` | Add Two Numbers | Done |
-| 003 | `area_rectangle.py` | Area of Rectangle | Done |
-| 004 | `average.py` | Average of Numbers | Done |
-| 005 | `celcius_to_fahrenheit.py` | Celsius to Fahrenheit | Done |
-| 006 | `circle_area.py` | Circle Area | Done |
-| 007 | `even_or_odd.py` | Even or Odd | Done |
-| 008 | `grade_calculator.py` | Grade Calculator | Done |
-| 009 | `greet.py` | Greet User | Done |
-| 010 | `max_of_two_num.py` | Max of Two Numbers | Done |
-| 011 | `minutes_to_seconds.py` | Minutes to Seconds | Done |
-| 012 | `positive_negative.py` | Positive or Negative | Done |
-| 013 | `square.py` | Square a Number | Done |
-| 014 | `swap_two_variables.py` | Swap Two Variables | Done |
-| 015–073 | — | Coming soon | — |
-
-</details>
-
----
-
-## Phase 2 — Intermediate Python
-
-`python-intermediat-phase-2/` &nbsp;·&nbsp; Days 074–146
-
-<details>
-<summary>View topics</summary>
-
-Functions & Recursion, List / Dict / Set Comprehensions, Object-Oriented Programming (Classes, Inheritance, Polymorphism), File I/O, JSON & CSV, Exception Handling, Modules & Packages, Decorators & Closures.
-
-</details>
-
----
-
-## Phase 3 — Advanced Python
-
-`python-advance-phase-3/` &nbsp;·&nbsp; Days 147–219
-
-<details>
-<summary>View topics</summary>
-
-Generators & Iterators, Context Managers, Metaclasses, Async / Await, Working with REST APIs, Regular Expressions, Design Patterns.
-
-</details>
-
----
-
-## Phase 4 — Data Structures & Algorithms
 
 `python-dsa-phase-4/` &nbsp;·&nbsp; Days 220–292
 
