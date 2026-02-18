@@ -6,7 +6,7 @@
 
 <br/>
 
-[![Progress](https://img.shields.io/badge/Progress-14%20%2F%20365%20Days-22c55e?style=for-the-badge&logo=python&logoColor=white)](https://github.com/Lourdhu02/python)
+[![Progress](https://img.shields.io/badge/Progress-15%20%2F%20365%20Days-22c55e?style=for-the-badge&logo=python&logoColor=white)](https://github.com/Lourdhu02/python)
 [![Python Version](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![GitHub Stars](https://img.shields.io/github/stars/Lourdhu02/python?style=for-the-badge&logo=github&logoColor=white&color=f59e0b)](https://github.com/Lourdhu02/python/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/Lourdhu02/python?style=for-the-badge&logo=git&logoColor=white&color=6366f1)](https://github.com/Lourdhu02/python/commits)
