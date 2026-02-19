@@ -6,8 +6,8 @@
 
 <br/>
 
-[![Days](https://img.shields.io/badge/Days%20Active-3%20%2F%20365-6366f1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lourdhu02/python)
-[![Problems](https://img.shields.io/badge/Problems%20Solved-16-22c55e?style=for-the-badge&logo=python&logoColor=white)](https://github.com/Lourdhu02/python)
+[![Days](https://img.shields.io/badge/Days%20Active-4%20%2F%20365-6366f1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lourdhu02/python)
+[![Problems](https://img.shields.io/badge/Problems%20Solved-22-22c55e?style=for-the-badge&logo=python&logoColor=white)](https://github.com/Lourdhu02/python)
 [![Python Version](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![GitHub Stars](https://img.shields.io/github/stars/Lourdhu02/python?style=for-the-badge&logo=github&logoColor=white&color=f59e0b)](https://github.com/Lourdhu02/python/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/Lourdhu02/python?style=for-the-badge&logo=git&logoColor=white&color=6366f1)](https://github.com/Lourdhu02/python/commits)
@@ -21,7 +21,7 @@
 
 This repository is a public record of my **365-day Python coding challenge**. Problems are solved across five structured phases — from syntax basics to CPython internals and data structures & algorithms.
 
-**Started:** February 14, 2025 &nbsp;|&nbsp; **Days Active:** 3 / 365 &nbsp;|&nbsp; **Problems Solved:** 16
+**Started:** February 14, 2025 &nbsp;|&nbsp; **Days Active:** 4 / 365 &nbsp;|&nbsp; **Problems Solved:** 22
 
 The goal is to code every day for 365 days. Problems per session are unlimited — some days 1, some days 10 or more.
 
