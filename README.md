@@ -87,3 +87,6 @@ MIT &copy; [Lourdhu02](https://github.com/Lourdhu02)
 <div align="center">
   365 days. Just consistency.
 </div>
+
+## Python
+Scripts, libraries, projects
